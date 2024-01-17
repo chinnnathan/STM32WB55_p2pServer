@@ -1,0 +1,5 @@
+init 
+
+program ../build/BLE_p2pServer.elf reset 0x08000000
+
+reset
