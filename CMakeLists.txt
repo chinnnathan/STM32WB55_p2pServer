@@ -17,10 +17,10 @@ set(EXECUTABLE ${PROJECT_NAME}.elf)
 
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/Core)
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/Lib)
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/Lib/Servo)
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/Lib/intf)
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/Lib/ble)
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/Lib/utility)
-add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/Lib/Servo)
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/STM32_WPAN)
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/Drivers)
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/Utilities)
@@ -79,8 +79,8 @@ target_link_options(${EXECUTABLE} PRIVATE
     -Wl,--gc-sections
     -Wl,--print-memory-usage
     # -g
-    # -ggdb
-    # -gdwarf-2
+    -ggdb
+    -gdwarf-2
     )
 
 add_definitions(-w)
@@ -94,5 +94,5 @@ COMMAND arm-none-eabi-size ${EXECUTABLE})
 add_custom_command(TARGET ${EXECUTABLE}
 POST_BUILD
 COMMAND arm-none-eabi-objcopy -O ihex ${EXECUTABLE} ${PROJECT_NAME}.hex
-# COMMAND arm-none-eabi-objcopy -O elf ${EXECUTABLE} ${PROJECT_NAME}.elf
+# COMMAND arm-none-eabi-objcopy -O elf ${EXECUTABLE} ${PROJECT_NAME}.elf)
 COMMAND arm-none-eabi-objcopy -O binary ${EXECUTABLE} ${PROJECT_NAME}.bin)

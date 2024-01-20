@@ -58,7 +58,8 @@ void MX_LPUART1_UART_Init(void);
 void MX_USART1_UART_Init(void);
 
 /* USER CODE BEGIN EFP */
-
+extern ADC_HandleTypeDef hadc1;
+extern uint32_t value_adc;
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/

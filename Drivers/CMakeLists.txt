@@ -19,6 +19,8 @@ set ( srcs
     # ${CMAKE_CURRENT_LIST_DIR}/Startup/startup_stm32f103ctx.s
     
     ${CMAKE_CURRENT_LIST_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal.c
+    ${CMAKE_CURRENT_LIST_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc.c
+    ${CMAKE_CURRENT_LIST_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_adc_ex.c
     ${CMAKE_CURRENT_LIST_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_cortex.c
     ${CMAKE_CURRENT_LIST_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_dma.c
     ${CMAKE_CURRENT_LIST_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_dma_ex.c
@@ -39,6 +41,7 @@ set ( srcs
     ${CMAKE_CURRENT_LIST_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_tim_ex.c
     ${CMAKE_CURRENT_LIST_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart.c
     ${CMAKE_CURRENT_LIST_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_uart_ex.c
+    ${CMAKE_CURRENT_LIST_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_ll_adc.c
     ${CMAKE_CURRENT_LIST_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_ll_rcc.c
 
     ${CMAKE_CURRENT_LIST_DIR}/BSP/P-NUCLEO-WB55.Nucleo/stm32wbxx_nucleo.c

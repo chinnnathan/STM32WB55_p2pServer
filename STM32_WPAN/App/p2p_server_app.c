@@ -143,7 +143,7 @@ void P2PS_STM_App_Notification(P2PS_STM_App_Notification_evt_t *pNotification)
           APP_DBG_MSG("-- P2P APPLICATION SERVER 1 : LED1 ON\n"); 
           APP_DBG_MSG(" \n\r");
           P2P_Server_App_Context.LedControl.Led1=0x01; /* LED1 ON */
-          run_clockwise(5, 0);
+          run_clockwise(5, 150);
         }
         if(pNotification->DataTransfered.pPayload[1] == 0x00)
         {
@@ -151,7 +151,7 @@ void P2PS_STM_App_Notification(P2PS_STM_App_Notification_evt_t *pNotification)
           APP_DBG_MSG("-- P2P APPLICATION SERVER 1 : LED1 OFF\n"); 
           APP_DBG_MSG(" \n\r");
           P2P_Server_App_Context.LedControl.Led1=0x00; /* LED1 OFF */
-          run_counterclockwise(5, 0);
+          run_counterclockwise(5, 150);
         }
       }
 #endif
